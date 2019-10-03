@@ -1,0 +1,34 @@
+{% extends "layouts/base.html" %}
+{% block title %}{{title}}{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+<img id="loading" alt="" src="/static/image/loader5.gif"/>
+<div class="container" style="margin: 0 auto;">
+  <div class="header">
+    <div class="header-button">
+      <button class="btn canvas-button" id="clearButton">Clear</button>
+      <button class="btn canvas-button" id="sendButton">Send data</button> 
+    </div>
+  </div>
+  <div class="row text-center">
+    <h1 class="canvas-header">স্বরবর্ণ আঁকি </h1>
+    <canvas id="inputCanvas" width="1000" height="400"></canvas>
+  </div>
+
+  <div id="myModal" class="popup">
+    <!-- Modal content -->
+    <div class="popup-content">
+      <div class="popup-header">
+        <span class="end">×</span>
+        <h2></h2>
+      </div>
+      <div class="popup-body">
+        <h1 id="display_content"></h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

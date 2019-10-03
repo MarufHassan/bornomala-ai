@@ -1,0 +1,11 @@
+{% extends "layouts/base.html" %}
+{% block title %}{{title}}{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+<div class="row text-center landing-page-div">
+  <img src="/static/image/bg1.jpeg" alt="Drawing" class="full-screen-image">
+  <button type="button" class="btn landing-button" onclick="window.location.href='{{ url_for('show')}}';">চলো স্বরবর্ণ আঁকি</button>
+</div>
+{% endblock %}
